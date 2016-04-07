@@ -10,9 +10,23 @@ import UIKit
 
 class FilterCollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    @IBOutlet var filterlabel :UILabel!
+    @IBOutlet var exampleimage:UIImageView!
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         // Initialization code
+        
+        filterlabel.text = "sepia"
+        exampleimage.image = UIImage(named: "sepia.jpg")
     }
 
-}
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)!
+    }
+    
+    }
