@@ -18,17 +18,19 @@ class ViewController: UIViewController ,UICollectionViewDataSource ,UICollection
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     
-        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-//        
+//        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+//
 //        filterlabel.text = "sepia"
 //        exampleimage.image = UIImage(named: "sepia.jpg")
     }
     
     //Cellに値を設定する
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath)as UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! FilterCollectionViewCell
         
         cell.backgroundColor = UIColor.orangeColor()
+        cell.filterlabel.text = "sepia"
+        cell.exampleimage.image = UIImage(named: "sepia.jpg")
         
         return cell
     }

@@ -17,8 +17,7 @@ class FilterCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         // Initialization code
         
-        filterlabel.text = "sepia"
-        exampleimage.image = UIImage(named: "sepia.jpg")
+    
     }
 
     override func awakeFromNib() {
